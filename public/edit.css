@@ -1,0 +1,79 @@
+/* === Edit Page Specific Styles === */
+.edit-body {
+  background-color: #18181b;
+  color: white;
+  font-family: sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  margin: 0;
+}
+
+.edit-container {
+  width: 100%;
+  max-width: 400px;
+  background-color: #27272a;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.back-link {
+  color: #60a5fa;
+  text-decoration: none;
+  font-size: 0.875rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.edit-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.label {
+  display: block;
+  font-size: 0.875rem;
+  color: #a1a1aa;
+  margin-bottom: 0.25rem;
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  border: none;
+  background-color: #3f3f46;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.input:focus {
+  outline: 2px solid #22c55e;
+}
+
+.input.disabled {
+  cursor: not-allowed;
+}
+
+.btn.green {
+  width: 100%;
+  background-color: #16a34a;
+  color: white;
+  font-weight: bold;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+}
+
+.btn.green:hover {
+  background-color: #15803d;
+}

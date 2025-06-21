@@ -1,0 +1,53 @@
+/* === Show Page Styles === */
+.show-body {
+  background-color: #18181b;
+  color: white;
+  font-family: sans-serif;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.show-wrapper {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 2.5rem 1rem;
+}
+
+.show-back {
+  margin-bottom: 1.5rem;
+}
+
+.show-card {
+  background-color: #27272a;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  border: 1px solid #3f3f46;
+}
+
+.show-title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #60a5fa;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #52525b;
+  padding-bottom: 0.5rem;
+}
+
+.show-content {
+  font-size: 1rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  color: #d4d4d8;
+  letter-spacing: 0.025em;
+}
+
+.back-link {
+  color: #60a5fa;
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
