@@ -8,12 +8,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 
-app.get("/", function(_req, res) { 
-    fs.readdir(`./files`,function(_err, files) {
-        res.render("index", {files: files});
-    })
-
+fs.readdir("./files", function (err, files) {
+  if (err) {
+    console.error("Failed to read files folder:", err);
+    return res.render("index", { files: [] });
+  }
+  res.render("index", { files: files });
 });
+
 
 app.get("/file/:filename", function(_req, res) { 
     fs.readFile(`./files/${_req.params.filename}`,"utf-8", function(_err, _filedata) {
