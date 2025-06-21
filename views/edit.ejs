@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Note</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-zinc-900 text-white font-sans min-h-screen flex items-center justify-center px-4">
+
+  <div class="w-full max-w-md bg-zinc-800 p-6 rounded-lg shadow-lg">
+
+    <a href="/" class="text-blue-400 hover:underline text-sm mb-4 inline-block">← Back to Home</a>
+
+    <h1 class="text-2xl font-semibold mb-6"> Rename Note</h1>
+
+    <form action="/edit" method="POST" class="space-y-4">
+      <!-- Previous filename (read-only input) -->
+      <div>
+        <label class="block text-sm text-zinc-400 mb-1">Current Filename</label>
+        <input
+          class="block w-full rounded-md px-4 py-2 bg-zinc-700 text-white cursor-not-allowed"
+          type="text"
+          name="previous"
+          value="<%= filename %>"
+          readonly
+        />
+      </div>
+
+      <!-- New filename -->
+      <div>
+        <label class="block text-sm text-zinc-400 mb-1">New Filename</label>
+        <input
+          class="block w-full rounded-md px-4 py-2 bg-zinc-700 text-white focus:outline-none focus:ring-2 focus:ring-green-500"
+          type="text"
+          name="new"
+          placeholder="Enter new name"
+          required
+        />
+      </div>
+
+      <input
+        class="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 rounded-md cursor-pointer"
+        type="submit"
+        value="Update Task"
+      />
+    </form>
+
+  </div>
+
+</body>
+</html>
