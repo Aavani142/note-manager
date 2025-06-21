@@ -39,13 +39,13 @@
 
     <!-- Tasks Section -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl px-2">
-      <% if (files.length > 0) { %>
+      <% if (files && files.length > 0) { %>
         <% files.forEach(function (val) { %>
           <div class="bg-zinc-800 rounded-lg p-5 shadow-md hover:shadow-blue-400 transition-all duration-300">
             <h2 class="text-2xl font-semibold truncate"><%= val.replace('.txt', '') %></h2>
             <div class="mt-4 flex justify-between text-sm text-blue-400">
-              <a href="/file/<%= val %>" class="hover:underline">Read More</a>
-              <a href="/edit/<%= val %>" class="hover:underline">Edit Filename</a>
+              <a href="/file/<%= encodeURIComponent(val) %>" class="hover:underline">Read More</a>
+              <a href="/edit/<%= encodeURIComponent(val) %>" class="hover:underline">Edit Filename</a>
             </div>
           </div>
         <% }) %>
