@@ -20,42 +20,81 @@ You can create, read, and rename notes — everything is stored as individual `.
 - Node.js
 - Express.js
 - EJS (Embedded JavaScript Templates)
-- Tailwind CSS
+- Custom CSS
 - File System module (`fs`)
 
 ---
 
 ## Page Structure
-### 1. Home Page (/)
-Displays the app title.
 
-Includes a form to create notes (title and details).
+### 1. / — Home Page
+File: views/index.ejs
+Purpose:
 
-Dynamically lists saved notes with options to read or rename them.
+Displays a form to create a new note
 
-### 2. Note Viewer Page (/file/:filename)
-Displays full content of a note.
+Lists all existing notes with:
 
-Clean layout with a back link to the home page.
+✅ Title
 
-### 3. Edit Note Page (/edit/:filename)
-Allows renaming of existing notes.
+✅ Link to "Read More"
 
-Shows current filename (read-only).
+✅ Link to "Edit Filename"
 
-Accepts new filename through a form.
+### 2. /create — Create Note (POST Route)
+Triggered From: Form on / (home page)
+Backend: app.post('/create')
+Purpose:
+
+Saves the new note as a .txt file inside the /files folder
+
+Redirects back to /
+
+### 3. /file/:filename — View a Note
+File: views/show.ejs
+Purpose:
+
+Opens and displays the content of a single note
+
+Renders the full text from the corresponding .txt file
+
+### 4. /edit/:filename — Edit Note (Rename)
+File: views/edit.ejs
+Purpose:
+
+Shows a form to rename a note
+
+Takes:
+
+Old filename (read-only)
+
+New filename (input)
+
+Submits to /edit (POST)
+
+### 5. /edit — Rename Note (POST Route)
+Backend: app.post('/edit')
+Purpose:
+
+Uses fs.rename() to rename the .txt file in /files
+
+Redirects to /
 
 
-
+---
 ## Screenshots
 
-![image](https://github.com/user-attachments/assets/d3bf1925-728f-4611-8c07-7fa7ee45b182)
+![image](https://github.com/user-attachments/assets/6f74347f-4904-4172-88ee-7cdb841f880d)
 
-![image](https://github.com/user-attachments/assets/ed6faf36-8dfd-4e7d-93ff-e8f9e73cabfc)
 
-![image](https://github.com/user-attachments/assets/7f1cd553-9d55-4819-bb3e-437c5c1dc53d)
+![image](https://github.com/user-attachments/assets/2532069a-617e-46a7-901e-d323e07f5ede)
 
-![image](https://github.com/user-attachments/assets/e5a9cb6c-df24-4f4e-9058-fc652667f396)
+
+![image](https://github.com/user-attachments/assets/3935c8a8-e489-40b0-be1c-d6a8aa06f7fd)
+
+
+![image](https://github.com/user-attachments/assets/f256c8e8-1a7e-4a8b-b242-58fb90d5590c)
+
 
 
 
