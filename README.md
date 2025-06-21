@@ -35,34 +35,31 @@ Displays a form to create a new note
 
 Lists all existing notes with:
 
-✅ Title
+- Title
 
-✅ Link to "Read More"
+- Link to "Read More"
 
-✅ Link to "Edit Filename"
+- Link to "Edit Filename"
 
 ### 2. /create — Create Note (POST Route)
 Triggered From: Form on / (home page)
 Backend: app.post('/create')
 Purpose:
-
-Saves the new note as a .txt file inside the /files folder
+      Saves the new note as a .txt file inside the /files folder
 
 Redirects back to /
 
 ### 3. /file/:filename — View a Note
 File: views/show.ejs
 Purpose:
-
-Opens and displays the content of a single note
+         Opens and displays the content of a single note
 
 Renders the full text from the corresponding .txt file
 
 ### 4. /edit/:filename — Edit Note (Rename)
 File: views/edit.ejs
 Purpose:
-
-Shows a form to rename a note
+        Shows a form to rename a note
 
 Takes:
 
