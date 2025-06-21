@@ -25,6 +25,28 @@ You can create, read, and rename notes — everything is stored as individual `.
 
 ---
 
+## Page Structure
+### 1. Home Page (/)
+Displays the app title.
+
+Includes a form to create notes (title and details).
+
+Dynamically lists saved notes with options to read or rename them.
+
+### 2. Note Viewer Page (/file/:filename)
+Displays full content of a note.
+
+Clean layout with a back link to the home page.
+
+### 3. Edit Note Page (/edit/:filename)
+Allows renaming of existing notes.
+
+Shows current filename (read-only).
+
+Accepts new filename through a form.
+
+
+
 ## Screenshots
 
 ![image](https://github.com/user-attachments/assets/d3bf1925-728f-4611-8c07-7fa7ee45b182)
